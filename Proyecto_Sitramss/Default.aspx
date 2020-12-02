@@ -11,7 +11,8 @@
     <form id="form1" runat="server">
     <div>
     
-    </div>
+        <asp:Button ID="Button1" runat="server" Text="Button" Width="82px" />
+&nbsp;Te Amo soy un gran burro</div>
     </form>
 </body>
 </html>
