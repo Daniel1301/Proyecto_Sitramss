@@ -1,0 +1,134 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: url('ssss.jpg');
+    background-size: cover;
+    font-family: 'Bell MT';
+}
+
+.loginbox {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 560px;
+    height: 550px;
+    padding: 50px 50px;
+    box-sizing: border-box;
+    background:rgba(0,0,0,0.5);
+
+}
+
+.registrabox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 580px;
+    height: 600px;
+    padding: 50px 50px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.5);
+
+}
+
+h3 {
+    font-family: Centaur;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color:  darkgreen;
+}
+
+.lblnombre, .lblnombreusuario,.lblcontrasena, .lblcontrasena2, .lblsexo {
+    font-weight: unset;
+    color: #fff;
+}
+.user {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    top: calc(-100px/2);
+    left: calc(50%-50px);
+    position:  center;
+}
+
+.registro {
+    width: 130px;
+    height: 130px;
+    overflow: hidden ;
+    top: calc(-100px/2);
+    left: calc(50%-50px);
+    position:  absolute;
+}
+h1{
+    font-family:Centaur;
+    padding:0;
+    margin:0;
+    text-align:center;
+    color: rgb(255, 216, 0)
+}
+.lblusuario, .lblcontra{
+  
+    font-weight: unset;
+    color: #fff;
+}
+
+.txtnombre, .txtnombreusuario, .btnsumit, .txtcontrasena, .txtcontrasena2{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.txtnombre, .txtnombreusuario, .txtcontrasena, .txtcontrasena2{
+        border-bottom: 1px solid #fff;
+        outline:none ;
+        color: #fff;
+        font-size: 16px;
+        background-color: transparent;
+    border-left-style: none;
+    border-left-color: inherit;
+    border-left-width: medium;
+    border-right-style: none;
+    border-right-color: inherit;
+    border-right-width: medium;
+    border-top-style: none;
+    border-top-color: inherit;
+    border-top-width: medium;
+    margin-left: 0px;
+}
+.txtusuario, .txtcontra, .btnsumit{
+    width:100%;
+    margin-bottom:30px;
+}
+.txtusuario, .txtcontra{
+    border: none;
+    border-bottom:1px solid #fff;
+    outline:none;
+    height:40px;
+    color:#fff;
+    font-size:16px;
+    background-color:transparent;
+}
+::placeholder{
+    color:rgba(255,255,255,.5);
+}
+.btnsumit{
+    border: none;
+    outline: none;
+    height:40px;
+    font-size:18px;
+    color: blue;
+    background-color: gold;
+    cursor: default;
+    border-radius:5px;
+    transition: .3s ease-in-out;
+
+}
+.btnsumit:hover{
+    background-color: cornflowerblue;
+}
+
+.btnregistrate{
+        display: table-cell;
+    vertical-align: middle;
+  
+}

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// Descripción breve de Burro
+/// Descripción breve de Login
 /// </summary>
-public class Burro
+public class Login
 {
-    public Burro()
+    public Login()
     {
         //
         // TODO: Agregar aquí la lógica del constructor
