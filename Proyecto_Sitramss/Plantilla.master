@@ -8,30 +8,24 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js" type="text/javascript"></script> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js" type="text/javascript"></script> 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css"rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
     <form id="form1" runat="server">
 
         <header>
             <div class="container-fluid">
-                <br><br />
+                <br />
                 <div class="row">
-                    <ul class="nav nav-tabs nav-justified">
-                        <li role="presentation" class="active"><a href="#">Inicio</a></li>
-                        <li role="presentation"><a href="#">Buses</a></li>
-                        <li role="presentation"><a href="#">Empleados</a></li>
-                        <li role="presentation"><a href="#">Horarios</a></li>
-                        <li role="presentation"><a href="#">Pasajeros</a></li>
-                        <li role="presentation"><a href="#">Ventas</a></li>
-                        <li role="presentation"><a href="#">Reportes</a></li>
-                        <li role="presentation"><a href="#">Salir</a></li>
-
-                    </ul>
-
+                    <div class="col-md-12">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active"><a href="#">Inicio</a></li>
+                             <li role="presentation" "><a href="#">Buses</a></li>
+                               <li role="presentation"><a href="#">Empleados</a></li>                                                    
+                        </ul>
+                    </div>
                 </div>
             </div>
 

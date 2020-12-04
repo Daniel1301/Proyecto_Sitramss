@@ -18,7 +18,14 @@
     background:rgba(0,0,0,0.5);
 
 }
-
+.sitramss{
+     width: 130px;
+    height: 130px;
+    overflow: hidden;
+    top: calc(-100px/2);
+    left: calc(50%-50px);
+    position:  center;
+}
 .registrabox {
     position: absolute;
     top: 50%;
