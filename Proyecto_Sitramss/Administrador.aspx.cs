@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class FormAdmind : System.Web.UI.Page
+public partial class Administrador : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

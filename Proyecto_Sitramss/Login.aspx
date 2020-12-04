@@ -23,8 +23,8 @@
         <asp:TextBox CssClass="txtusuario" runat="server" placeholder="Digite su Usuario"></asp:TextBox>
          <asp:Label CssClass="lblcontra" runat="server" Text="Contraseña"></asp:Label>
         <asp:TextBox CssClass="txtcontra" runat="server" placeholder=".........." TextMode="Password"></asp:TextBox>
-            <asp:Button CssClass="btnsumit" runat="server" Text="Acceder" />
-               <br> <asp:LinkButton CssClass="btnregistrate" runat="server">Realizar un registro</asp:LinkButton> </br>
+            <asp:Button CssClass="btnsumit" runat="server" Text="Acceder" OnClick="Unnamed5_Click" />
+               <br> <asp:LinkButton CssClass="btnregistrate" runat="server" OnClick="Unnamed6_Click">Realizar un registro</asp:LinkButton> </br>
         <asp:LinkButton CssClass="btnfor" runat="server">¿Ha olvidado su contraseña?</asp:LinkButton>
     </div>
     </form>

@@ -11,4 +11,14 @@ public partial class Login : System.Web.UI.Page
     {
 
     }
+
+    protected void Unnamed5_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Administrador.aspx");
+    }
+
+    protected void Unnamed6_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Registrar_usuario.aspx");
+    }
 }
