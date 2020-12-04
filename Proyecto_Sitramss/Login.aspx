@@ -20,13 +20,14 @@
         <asp:Image ID="imgImagen" runat="server" ImageUrl="https://educaperu.org/wp-content/uploads/2018/10/login-usuario.png" AlternateText="" class="user" />
         <h1>Bienvenido!!</h1>
          <asp:Label CssClass="lblusuario" runat="server" Text="Usuario"></asp:Label>
-        <asp:TextBox CssClass="txtusuario" runat="server" placeholder="Digite su Usuario"></asp:TextBox>
+        <asp:TextBox CssClass="txtusuario" runat="server" placeholder="Digite su Usuario" ID="txtuser"></asp:TextBox>
          <asp:Label CssClass="lblcontra" runat="server" Text="Contraseña"></asp:Label>
-        <asp:TextBox CssClass="txtcontra" runat="server" placeholder=".........." TextMode="Password"></asp:TextBox>
+        <asp:TextBox CssClass="txtcontra" runat="server" placeholder=".........." TextMode="Password" ID="txtpass"></asp:TextBox>
             <asp:Button CssClass="btnsumit" runat="server" Text="Acceder" OnClick="Unnamed5_Click" />
                <br> <asp:LinkButton CssClass="btnregistrate" runat="server" OnClick="Unnamed6_Click">Realizar un registro</asp:LinkButton> </br>
         <asp:LinkButton CssClass="btnfor" runat="server">¿Ha olvidado su contraseña?</asp:LinkButton>
     </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SITRAMSSConnectionString2 %>" SelectCommand="SELECT * FROM [usuarios]"></asp:SqlDataSource>
     </form>
 </body>
 </html>
