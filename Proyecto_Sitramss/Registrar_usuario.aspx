@@ -7,13 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="style.css" rel="stylesheet" />
-    <style type="text/css">
-        .auto-style1 {
-            left: 50px;
-            top: 50px;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
     <div class="registrabox">
@@ -23,17 +17,17 @@
             <h1> Registra un nuevo usuario aqui!!</h1>
             <br></br>
              <asp:Label CssClass="lblnombre" runat="server" Text="Nombre Completo: "></asp:Label>
-        <asp:TextBox CssClass="txtnombre" runat="server" placeholder="Digite su nombre"></asp:TextBox>
+        <asp:TextBox CssClass="txtnombre" runat="server" placeholder="Digite su nombre" ID="txtnombre"></asp:TextBox>
              <asp:Label CssClass="lblnombreusuario" runat="server" Text="Nombre de usuario: "></asp:Label>
-        <asp:TextBox CssClass="txtnombreusuario" runat="server" placeholder="usuario"></asp:TextBox>
+        <asp:TextBox CssClass="txtnombreusuario" runat="server" placeholder="usuario" ID="txtusuario"></asp:TextBox>
 
          <asp:Label CssClass="lblnombreusuario" runat="server" Text="Direccion: "></asp:Label>
-        <asp:TextBox CssClass="txtnombreusuario" runat="server" placeholder="Direccion"></asp:TextBox>
+        <asp:TextBox CssClass="txtnombreusuario" runat="server" placeholder="Direccion" ID="txtdireccion"></asp:TextBox>
 
          <asp:Label CssClass="lblnombreusuario" runat="server" Text="DUI: "></asp:Label>
-        <asp:TextBox CssClass="txtnombreusuario" runat="server" placeholder="DUI"></asp:TextBox>
+        <asp:TextBox CssClass="txtnombreusuario" runat="server" placeholder="DUI" ID="txtdui"></asp:TextBox>
         <asp:Label CssClass="lblnombreusuario" runat="server" Text="Telefono: "></asp:Label>
-        <asp:TextBox CssClass="txtnombreusuario" runat="server" placeholder="Telefono"></asp:TextBox>
+        <asp:TextBox CssClass="txtnombreusuario" runat="server" placeholder="Telefono" ID="txttelefono"></asp:TextBox>
 
 
          <asp:Label CssClass="lblcontrasena" runat="server" Text="Contraseña: "></asp:Label>
@@ -44,25 +38,22 @@
             <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtcontraseña1" ControlToValidate="txtcontraseña2" ErrorMessage="Escriba las contraseñas iguales!!" ForeColor="Red"></asp:CompareValidator>
             <br />
 
-             <asp:Label CssClass="lblsexo" runat="server" Text="Sexo: "></asp:Label>
-            <asp:DropDownList CssClass="cbmsexo" runat="server" Height="24px" Width="321px" style="margin-left: 18px">
-                <asp:ListItem></asp:ListItem>
-              <asp:ListItem>Masculino</asp:ListItem>
-                <asp:ListItem>Femenino</asp:ListItem>
-              </asp:DropDownList>
-        <br /> <br> <br />
+            <asp:Label CssClass="lblcontrasena" runat="server" Text="Email: "></asp:Label>
+        <asp:TextBox CssClass="txtcontrasena" runat="server" placeholder=".........."  ID="txtemail"></asp:TextBox>
+        <br />  <br />
          <asp:Label CssClass="lblsexo" runat="server" Text="Tipo: "></asp:Label>
-            <asp:DropDownList CssClass="cbmsexo" runat="server" Height="24px" Width="321px" style="margin-left: 18px">
-                <asp:ListItem></asp:ListItem>
+            <asp:DropDownList CssClass="cbmsexo" runat="server" Height="24px" Width="321px" style="margin-left: 18px" ID="txttipo">
+                <asp:ListItem>Seleccione..</asp:ListItem>
               <asp:ListItem>Empleado</asp:ListItem>
                 <asp:ListItem>Administrador</asp:ListItem>
               </asp:DropDownList>
         
+           
+             
               <br />
-              <br />
-              <br />
+        <br />
               
-            <asp:Button CssClass="btnsumit" runat="server" Text="Registrate"/>
+            <asp:Button CssClass="btnsumit" runat="server" Text="Registrate" OnClick="Unnamed17_Click"/>
         </div>
     </form>
 </body>
