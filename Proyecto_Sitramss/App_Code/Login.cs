@@ -14,4 +14,8 @@ public class Login
         // TODO: Agregar aquí la lógica del constructor
         //
     }
+
+    public meto()
+    {
+    }
 }
