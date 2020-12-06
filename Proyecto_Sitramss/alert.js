@@ -1,7 +1,7 @@
 ﻿function Success() {
     Swal.fire(
         'Bien Hecho!',
-        'Datos almacenados correctamente!',
+        'La acción se ha realizado de forma correcta!',
         'success'
     )
 }
@@ -14,7 +14,7 @@ function DatosErroneos() {
     Swal.fire({
         type: 'error',
         title: 'oh no...',
-        text: 'Por favor revisa los datos ingresados',
+        text: 'No se pudo realizar la acción solicitada',
         footer: '<a href>Ocurrio un error!</a>'
     })
 }
