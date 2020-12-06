@@ -4,7 +4,8 @@
 }
 
 body {
-    background: url('../Images/fondito.png') no-repeat center center;
+    background-image: url('../Images/fondito.png');
+    background-size: cover;
 }
 .abs-center {
   display: flex;
