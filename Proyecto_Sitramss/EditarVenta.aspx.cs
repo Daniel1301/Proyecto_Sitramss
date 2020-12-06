@@ -42,12 +42,12 @@ public partial class EditarVenta : System.Web.UI.Page
                 //cmd.ExecuteNonQuery();
                 Conexion.Close();
             }
-
+            else
+            {
+                Response.Redirect("Ventas.aspx");
+            }
 
         }
-
-
-
     }
 
 

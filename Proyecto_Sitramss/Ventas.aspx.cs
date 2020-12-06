@@ -6,18 +6,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
-
 public partial class Ventas : System.Web.UI.Page
 {
 
     SqlConnection Conexion;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         Conexion = new SqlConnection(@"Data Source=USER-PC\MSSQLSERVER12;database =SITRAMSS; integrated security= true");
-
     }
-
-
 
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -26,6 +23,7 @@ public partial class Ventas : System.Web.UI.Page
 
     protected void btnEliminarVenta_Click(object sender, EventArgs e)
     {
+
         LinkButton btnEliminar = (LinkButton)sender;
 
         int id = Convert.ToInt32(btnEliminar.CommandArgument);
@@ -45,11 +43,13 @@ public partial class Ventas : System.Web.UI.Page
         catch (Exception x)
         {
 
-            ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "DatosErroneos()", true);
+            ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "Error()", true);
             //Label1.Text = "<script> Swal.fire({position: 'top-end', icon: 'success',title: 'Has logrado guardar tus avances.', showConfirmButton: false,timer: 1500}) </script>";
         }
 
 
         GridView1.DataBind();
+
+
     }
 }
