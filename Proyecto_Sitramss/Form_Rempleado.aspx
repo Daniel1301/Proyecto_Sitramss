@@ -1,10 +1,74 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Form_Rempleado.aspx.cs" Inherits="Form_Rempleado" %>
 
 <!DOCTYPE html>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js" type="text/javascript"></script> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css"rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script >
+
+        function alert() {
+
+            swal("Felicitaciones!", "Has agregado con exito un nuevo registro!", "success");
+        }
+
+        function msj() {
+            swal("Completado", "Su registro se ha eliminado :)", "info");
+        }
+        function msj2() {
+            swal("Completado", "Su registro se ha modificado :)", "info");
+        }
+        function msj3() {
+            swal("ERROR", "FATAL ERROR USTED DEBE SELECCIONAR ALGO", "error");
+        }
+
+        var object = { status: false, ele: null };
+        function ConfirmDelete(ev) {
+            if (object.status) { return true; };
+            swal({
+                title: "Estas seguro de eliminar el registro?",
+                text: "Una ves des en aceptar no podras recuperarlo!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Aceptar eliminar archivo",
+                closeOnConfirm: true
+            },
+function () {
+    object.status = true;
+    object.ele = ev;
+    object.ele.click();
+});
+            return false;
+        }
+
+
+        var obj = { sta: false, ele: null };
+        function Update(ev) {
+            if (obj.sta) { return true; };
+            swal({
+                title: "Estas seguro de actualizar el registro?",
+                text: "Si le aparece este mensaje es porque usted esta intentando modificar campos de un usuario",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-success",
+                confirmButtonText: "Actualizar",
+                closeOnConfirm: true
+            },
+function () {
+    obj.sta = true;
+    obj.ele = ev;
+    obj.ele.click();
+});
+            return false;
+        }
+        
+
+
+
+    </script>
     <title></title>
     <style type="text/css">
         .auto-style1 {
@@ -17,15 +81,15 @@
             height: 26px;
         }
         .auto-style4 {
-            width: 441px;
+            width: 210px;
         }
         .auto-style5 {
             height: 23px;
-            width: 441px;
+            width: 210px;
         }
         .auto-style6 {
             height: 26px;
-            width: 441px;
+            width: 210px;
         }
         .auto-style7 {
             width: 232px;
@@ -94,6 +158,7 @@
         </asp:SqlDataSource>
     
     </div>
+        <div class="col-md-8 col-md-offset-2">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style7">
@@ -101,7 +166,7 @@
                     Ingrese ID de Empleado:</td>
                 <td class="auto-style4">
                     
-                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
                     
                 </td>
                 <td>
@@ -155,10 +220,10 @@
                     <asp:Button ID="btnregistrar" runat="server" OnClick="btnregistrar_Click" Text="Registrar" Width="170px" />
                 </td>
                 <td>
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" />
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" OnClientClick="return Update(this);" Width="125px" />
                 </td>
                 <td>
-                    <asp:Button ID="Button3" runat="server" Text="Eliminar" />
+                    <asp:Button ID="Button3" runat="server" Text="Eliminar" OnClick="Button3_Click" Width="124px" />
                 </td>
             </tr>
         </table>
@@ -181,6 +246,7 @@
         </asp:GridView>
         <br />
         <br />
+            </div>
     </form>
 </body>
 </html>

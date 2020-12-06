@@ -14,7 +14,7 @@ public partial class Form_Rempleado : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //cadena de conexion
-        Conexion = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;Initial Catalog=SITRAMSS;Integrated Security=True");
+        Conexion = new SqlConnection(@"Data Source=BRYANELAZ\XPS;Initial Catalog=SITRAMSS;Integrated Security=True");
         MostrarDatos();
     }
     /// <summary>
@@ -105,12 +105,13 @@ public partial class Form_Rempleado : System.Web.UI.Page
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        /*
+        
         //abriendo conexion
         Conexion.Open();
         //consulta
         SqlCommand cmd = new SqlCommand("Update usuarios set usuario=@usuario, contraseña=@contraseña, nombres=@nombres,direccion=@direccion,dui=@dui,telefono=@telefono,email=@email,tipo=@tipo where id_user=@id_user", Conexion);
         //asignando datos de los textbox a los parametros de la consulta
+        cmd.Parameters.Add("id_user", SqlDbType.VarChar, 50).Value =TextBox1.Text;
         cmd.Parameters.Add("tipo", SqlDbType.VarChar, 50).Value = "Empleado";
         cmd.Parameters.Add("usuario", SqlDbType.VarChar, 50).Value = txtusuario.Text;
         cmd.Parameters.Add("contraseña", SqlDbType.VarChar, 50).Value = txtcontraseña1.Text;
@@ -132,7 +133,7 @@ public partial class Form_Rempleado : System.Web.UI.Page
 
         txttelefono.Text = "";
         txtdui.Text = "";
-        MostrarDatos();*/
+        MostrarDatos();
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -148,6 +149,39 @@ public partial class Form_Rempleado : System.Web.UI.Page
         Gv.DataSource = dt;
         Gv.DataBind();
         Conexion.Close();
+
+    }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            Conexion.Open();
+            SqlCommand cmd = new SqlCommand("Delete from usuarios where id_user = @id_user", Conexion);
+            cmd.Parameters.Add("id_user", SqlDbType.Int, 20).Value = TextBox1.Text;
+            cmd.ExecuteNonQuery();
+            Conexion.Close();
+            MostrarDatos();
+            txtusuario.Text = "";
+            txtcontraseña1.Text = "";
+            txtcontrasena2.Text = "";
+            txtnombre.Text = "";
+            txtdireccion.Text = "";
+            txtemail.Text = "";
+
+            txttelefono.Text = "";
+            txtdui.Text = "";
+
+           
+        }
+        catch (Exception ex)
+        {
+            ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj3()", true);
+        }
+    }
+
+    protected void TextBox1_TextChanged(object sender, EventArgs e)
+    {
 
     }
 }
