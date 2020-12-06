@@ -9,7 +9,7 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="n_venta" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-hover w-50 mx-auto"                  
         >
         <Columns>
-            <asp:BoundField DataField="n_venta" HeaderText="n_venta" InsertVisible="False" ReadOnly="True" SortExpression="n_venta" />
+            <asp:BoundField DataField="n_venta" HeaderText="N_venta" InsertVisible="False" ReadOnly="True" SortExpression="n_venta" />
             <asp:BoundField DataField="nombres" HeaderText="Nombres" SortExpression="nombres" />
             <asp:BoundField DataField="apellidos" HeaderText="Apellidos" SortExpression="apellidos" />
             <asp:BoundField DataField="servicio" HeaderText="Servicio" SortExpression="servicio" />
