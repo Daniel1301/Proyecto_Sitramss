@@ -71,9 +71,6 @@ function () {
     </script>
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
         .auto-style2 {
             height: 23px;
         }
@@ -94,22 +91,15 @@ function () {
         .auto-style7 {
             width: 232px;
         }
-        .auto-style8 {
-            height: 23px;
-            width: 232px;
-        }
         .auto-style9 {
             height: 26px;
             width: 232px;
         }
-        .auto-style10 {
-            margin-top: 0px;
-        }
         </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
+    <form id="form1"  runat="server">
+    <div class="col-md-8 col-md-offset-2">
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:SITRAMSSConnectionString3 %>" DeleteCommand="DELETE FROM [usuarios] WHERE [id_user] = @original_id_user AND (([usuario] = @original_usuario) OR ([usuario] IS NULL AND @original_usuario IS NULL)) AND (([contraseña] = @original_contraseña) OR ([contraseña] IS NULL AND @original_contraseña IS NULL)) AND (([nombres] = @original_nombres) OR ([nombres] IS NULL AND @original_nombres IS NULL)) AND (([direccion] = @original_direccion) OR ([direccion] IS NULL AND @original_direccion IS NULL)) AND (([dui] = @original_dui) OR ([dui] IS NULL AND @original_dui IS NULL)) AND (([telefono] = @original_telefono) OR ([telefono] IS NULL AND @original_telefono IS NULL)) AND (([email] = @original_email) OR ([email] IS NULL AND @original_email IS NULL)) AND (([tipo] = @original_tipo) OR ([tipo] IS NULL AND @original_tipo IS NULL))" InsertCommand="INSERT INTO [usuarios] ([usuario], [contraseña], [nombres], [direccion], [dui], [telefono], [email], [tipo]) VALUES (@usuario, @contraseña, @nombres, @direccion, @dui, @telefono, @email, @tipo)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [usuarios] WHERE ([tipo] = @tipo)" UpdateCommand="UPDATE [usuarios] SET [usuario] = @usuario, [contraseña] = @contraseña, [nombres] = @nombres, [direccion] = @direccion, [dui] = @dui, [telefono] = @telefono, [email] = @email, [tipo] = @tipo WHERE [id_user] = @original_id_user AND (([usuario] = @original_usuario) OR ([usuario] IS NULL AND @original_usuario IS NULL)) AND (([contraseña] = @original_contraseña) OR ([contraseña] IS NULL AND @original_contraseña IS NULL)) AND (([nombres] = @original_nombres) OR ([nombres] IS NULL AND @original_nombres IS NULL)) AND (([direccion] = @original_direccion) OR ([direccion] IS NULL AND @original_direccion IS NULL)) AND (([dui] = @original_dui) OR ([dui] IS NULL AND @original_dui IS NULL)) AND (([telefono] = @original_telefono) OR ([telefono] IS NULL AND @original_telefono IS NULL)) AND (([email] = @original_email) OR ([email] IS NULL AND @original_email IS NULL)) AND (([tipo] = @original_tipo) OR ([tipo] IS NULL AND @original_tipo IS NULL))">
             <DeleteParameters>
@@ -157,16 +147,16 @@ function () {
             </UpdateParameters>
         </asp:SqlDataSource>
     
+        <br />
+    
     </div>
         <div class="col-md-8 col-md-offset-2">
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style7">
-                    
-                    Ingrese ID de Empleado:</td>
-                <td class="auto-style4">
-                    
-                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+           
+        <table class="table table-striped">
+            <tr >
+                <td class="auto-style6">Ingrese ID de Empleado:</td>
+                <td >
+                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" OnTextChanged="TextBox1_TextChanged" class="form-control"></asp:TextBox>
                     
                 </td>
                 <td>
@@ -175,7 +165,7 @@ function () {
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style9">Ingrese Nombre de Empleado:</td>
+                <td class="auto-style6">Ingrese Nombre de Empleado:</td>
                 <td class="auto-style6">
                     <asp:TextBox ID="txtnombre" runat="server"></asp:TextBox>
                 </td>
@@ -185,7 +175,8 @@ function () {
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8">Ingrese Nombre Usuario:</td>
+                
+                <td class="input-group-text">Ingrese Nombre Usuario:</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="txtusuario" runat="server"></asp:TextBox>
                 </td>
@@ -215,23 +206,34 @@ function () {
                 </td>
             </tr>
             <tr>
+                <td class="auto-style7">
+                    <asp:Button ID="btnregistrar" runat="server" OnClick="btnregistrar_Click" Text="Registrar" CssClass="btn btn-primary mb-2" OnClientClick="return ConfirmDelete(this);" Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" />
+                </td>
+                <td class="auto-style4">
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" CssClass="btn btn-primary mb-2" OnClientClick="return Update(this);" Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" />
+                </td>
+                <td>
+                    <asp:Button ID="Button3" runat="server" Text="Eliminar" CssClass="btn btn-primary mb-2" OnClick="Button3_Click" Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" />
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
                 <td class="auto-style7">&nbsp;</td>
                 <td class="auto-style4">
-                    <asp:Button ID="btnregistrar" runat="server" OnClick="btnregistrar_Click" Text="Registrar" Width="170px" />
+                    &nbsp;</td>
+                <td>
+        <asp:TextBox ID="txtbuscar" runat="server" Height="29px" Width="250px"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" OnClientClick="return Update(this);" Width="125px" />
-                </td>
-                <td>
-                    <asp:Button ID="Button3" runat="server" Text="Eliminar" OnClick="Button3_Click" Width="124px" />
+        <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="Button1_Click" Height="36px" CssClass="btn btn-success" Width="106px" />
                 </td>
             </tr>
         </table>
+                
         <br />
-        <asp:TextBox ID="txtbuscar" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="Button1_Click" />
         <br />
-        <asp:GridView ID="Gv" runat="server" OnSelectedIndexChanged="Gv_SelectedIndexChanged" AutoGenerateColumns="False" CssClass="auto-style10">
+        <asp:GridView ID="Gv" runat="server" OnSelectedIndexChanged="Gv_SelectedIndexChanged" AutoGenerateColumns="False" Cssclass="table table-striped">
             <Columns>
                 <asp:BoundField DataField="id_user" HeaderText="ID" />
                 <asp:BoundField DataField="usuario" HeaderText="USUARIO" />
