@@ -17,15 +17,15 @@
             height: 26px;
         }
         .auto-style4 {
-            width: 441px;
+            width: 210px;
         }
         .auto-style5 {
             height: 23px;
-            width: 441px;
+            width: 210px;
         }
         .auto-style6 {
             height: 26px;
-            width: 441px;
+            width: 210px;
         }
         .auto-style7 {
             width: 232px;
@@ -155,10 +155,10 @@
                     <asp:Button ID="btnregistrar" runat="server" OnClick="btnregistrar_Click" Text="Registrar" Width="170px" />
                 </td>
                 <td>
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" />
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" Width="125px" />
                 </td>
                 <td>
-                    <asp:Button ID="Button3" runat="server" Text="Eliminar" />
+                    <asp:Button ID="Button3" runat="server" Text="Eliminar" OnClick="Button3_Click" Width="124px" />
                 </td>
             </tr>
         </table>
