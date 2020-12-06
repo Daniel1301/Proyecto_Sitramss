@@ -179,4 +179,9 @@ public partial class Form_Rempleado : System.Web.UI.Page
             ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj3()", true);
         }
     }
+
+    protected void TextBox1_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }
