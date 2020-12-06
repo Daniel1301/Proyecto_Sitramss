@@ -221,12 +221,13 @@ function () {
             <tr>
                 <td class="auto-style7">&nbsp;</td>
                 <td class="auto-style4">
-                    &nbsp;</td>
+        <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="Button1_Click" Height="36px" CssClass="btn btn-success" Width="106px" />
+                </td>
                 <td>
         <asp:TextBox ID="txtbuscar" runat="server" Height="29px" Width="250px"></asp:TextBox>
                 </td>
                 <td>
-        <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="Button1_Click" Height="36px" CssClass="btn btn-success" Width="106px" />
+                    <asp:ImageButton ID="ImageButton1" runat="server" DescriptionUrl="~/Images/busquedaicon.png" ImageUrl="~/Images/buscar.png" Height="30px" Width="37px" OnClick="ImageButton1_Click" />
                 </td>
             </tr>
         </table>

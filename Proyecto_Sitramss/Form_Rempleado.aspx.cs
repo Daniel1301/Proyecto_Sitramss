@@ -71,6 +71,7 @@ public partial class Form_Rempleado : System.Web.UI.Page
 
         txttelefono.Text = "";
         txtdui.Text = "";
+        ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "alert()", true);
         MostrarDatos();
     }
 
@@ -183,5 +184,20 @@ public partial class Form_Rempleado : System.Web.UI.Page
     protected void TextBox1_TextChanged(object sender, EventArgs e)
     {
 
+    }
+
+    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    {
+        //buscar
+        string busqueda = txtbuscar.Text;
+        Conexion.Open();
+        DataTable dt = new DataTable();
+        SqlCommand cmd = new SqlCommand("Select * from usuarios where usuario=@usuario", Conexion);
+        cmd.Parameters.Add("usuario", SqlDbType.VarChar, 50).Value = txtbuscar.Text;
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        da.Fill(dt);
+        Gv.DataSource = dt;
+        Gv.DataBind();
+        Conexion.Close();
     }
 }
