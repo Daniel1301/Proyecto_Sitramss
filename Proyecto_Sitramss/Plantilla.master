@@ -6,13 +6,16 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link href="Estilos/EstiloA.css" rel="stylesheet" />
      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js" type="text/javascript"></script> 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css"rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+    
     <form id="form1" runat="server">
 
         <header>
@@ -21,10 +24,24 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="nav nav-tabs">
-                            <li role="presentation" class="active"><a href="#">Inicio</a></li>
-                             <li role="presentation" "><a href="#">Buses</a></li>
-                               <li role="presentation"><a href="#">Empleados</a></li>                                                    
-                        </ul>
+                            <li role="presentation" class="active"><a href="#"><h4>Inicio</h4></a></li>
+                            <li role="presentation" "><a href="#"><h4>Buses</h4></a></li>
+                            <li role="presentation"><a href="#"><h4>Empleados</h4></a></li>   
+                            
+                            <ul class="nav nav-tabs">
+                                     <li role="presentation" class="dropdown">
+                                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                             <h4>Registros</h4>
+                                             <span class="caret"></span>
+                                         </a>
+                                <ul class="dropdown-menu">
+                                    <li role="presentation" "><a href="#"><h5>Registro de Empleado</h5></a></li>
+                                    <li role="presentation" "><a href="#"><h5>Registro de Pasajero</h5></a></li>
+                                     <li role="presentation" "><a href="#"><h5>Registro de SubAdministrador</h5></a></li>
+                                 </ul>
+                                      </li>
+                            </ul>
+                            </ul>
                     </div>
                 </div>
             </div>

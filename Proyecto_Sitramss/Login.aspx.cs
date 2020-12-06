@@ -24,7 +24,7 @@ public partial class Login : System.Web.UI.Page
     public void Verificacion_de_login()
     {
         //Cadena de conexion
-        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=BRYANELAZ\XPS;Initial Catalog=SITRAMSS;Integrated Security=True"))
+        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;Initial Catalog=SITRAMSS;Integrated Security=True"))
         {
             //abriendo la base de datos
             sqlcon.Open();
@@ -54,7 +54,7 @@ public partial class Login : System.Web.UI.Page
     public void Verificacion_dos_pasos()
     {
         //cadena de conexion
-        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=BRYANELAZ\XPS;Initial Catalog=SITRAMSS;Integrated Security=True"))
+        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;Initial Catalog=SITRAMSS;Integrated Security=True"))
         {
             //abriendo la base de datos
             sqlcon.Open();

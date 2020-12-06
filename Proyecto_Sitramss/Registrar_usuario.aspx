@@ -46,6 +46,7 @@
                 <asp:ListItem>Seleccione..</asp:ListItem>
               <asp:ListItem>Empleado</asp:ListItem>
                 <asp:ListItem>Administrador</asp:ListItem>
+                <asp:ListItem>Pasajeros</asp:ListItem>
               </asp:DropDownList>
         
            
