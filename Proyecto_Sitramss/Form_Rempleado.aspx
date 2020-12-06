@@ -41,7 +41,7 @@
         .auto-style10 {
             margin-top: 0px;
         }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -154,29 +154,32 @@
                 <td class="auto-style4">
                     <asp:Button ID="btnregistrar" runat="server" OnClick="btnregistrar_Click" Text="Registrar" Width="170px" />
                 </td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" />
+                </td>
+                <td>
+                    <asp:Button ID="Button3" runat="server" Text="Eliminar" />
+                </td>
             </tr>
         </table>
         <br />
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Buscar" />
+        <asp:TextBox ID="txtbuscar" runat="server"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="Button1_Click" />
         <br />
-        <br />
-        <asp:GridView ID="Gv" runat="server" AutoGenerateColumns="False" CssClass="auto-style10" DataKeyNames="id_user" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="Gv" runat="server" OnSelectedIndexChanged="Gv_SelectedIndexChanged" AutoGenerateColumns="False" CssClass="auto-style10">
             <Columns>
-                <asp:BoundField DataField="id_user" HeaderText="id_user" InsertVisible="False" ReadOnly="True" SortExpression="id_user" />
-                <asp:BoundField DataField="nombres" HeaderText="nombres" SortExpression="nombres" />
-                <asp:BoundField DataField="usuario" HeaderText="usuario" SortExpression="usuario" />
-                <asp:BoundField DataField="direccion" HeaderText="direccion" SortExpression="direccion" />
-                <asp:BoundField DataField="dui" HeaderText="dui" SortExpression="dui" />
-                <asp:BoundField DataField="contraseña" HeaderText="contraseña" SortExpression="contraseña" />
-                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
-                <asp:BoundField DataField="telefono" HeaderText="telefono" SortExpression="telefono" />
-                <asp:BoundField DataField="tipo" HeaderText="tipo" SortExpression="tipo" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:BoundField DataField="id_user" HeaderText="ID" />
+                <asp:BoundField DataField="usuario" HeaderText="USUARIO" />
+                <asp:BoundField DataField="nombres" HeaderText="NOMBRE" />
+                <asp:BoundField DataField="contraseña" HeaderText="CONTRASENA" />
+                <asp:BoundField DataField="direccion" HeaderText="DIRECCION" />
+                <asp:BoundField DataField="dui" HeaderText="DUI" />
+                <asp:BoundField DataField="email" HeaderText="E-MAIL" />
+                <asp:BoundField DataField="telefono" HeaderText="TELEFONO" />
+                <asp:CommandField ButtonType="Button" HeaderText="Seleccion" ShowHeader="True" ShowSelectButton="True" />
             </Columns>
         </asp:GridView>
+        <br />
         <br />
     </form>
 </body>
