@@ -2,7 +2,9 @@
 {height: 100%;
 
 }
-
+h4 {
+    font-family: Segoe UI;
+}
 body {
     background-image: url('../Images/fondito.png');
     background-size: cover;

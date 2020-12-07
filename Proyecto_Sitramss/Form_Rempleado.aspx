@@ -24,6 +24,9 @@
         function msj3() {
             swal("ERROR", "FATAL ERROR USTED DEBE SELECCIONAR ALGO", "error");
         }
+        function msj4() {
+            swal("ERROR", "HAS DEJADO ALGUN CAMPO EN BLANCO PORFAVOR INGRESA UN VALOR Y VUELVE A INTENTARLO!", "error");
+        }
 
         var object = { status: false, ele: null };
         function ConfirmDelete(ev) {
@@ -89,12 +92,33 @@ function () {
             height: 26px;
             width: 210px;
         }
-        .auto-style7 {
-            width: 232px;
-        }
-        .auto-style9 {
+        .auto-style10 {
             height: 26px;
-            width: 232px;
+            width: 374px;
+        }
+        .auto-style11 {
+            width: 374px;
+        }
+        .auto-style12 {
+            width: 202px;
+        }
+        .auto-style13 {
+            height: 26px;
+            width: 202px;
+        }
+        .auto-style14 {
+            height: 23px;
+            width: 202px;
+        }
+        .auto-style16 {
+            width: 225px;
+        }
+        .auto-style17 {
+            width: 35%
+        }
+        .auto-style18 {
+            width: 374px;
+            height: 23px;
         }
         </style>
 </head>
@@ -153,100 +177,116 @@ function () {
     </div>
         <div class="col-md-8 col-md-offset-2">
            
-        <table class="table table-striped">
+        <table class="table">
             <tr >
-                <td class="auto-style6">Ingrese ID de Empleado:</td>
+                <td class="auto-style10"><h4 style="color: #FFFFFF">Ingrese ID de Empleado:</h4></td>
                 <td >
-                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" OnTextChanged="TextBox1_TextChanged" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" Enabled="False" OnTextChanged="TextBox1_TextChanged" class="form-control" Width="21px"></asp:TextBox>
                     
                 </td>
-                <td>
+                <td class="auto-style12">
                     
                     &nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style6">Ingrese Nombre de Empleado:</td>
+                <td class="auto-style10"><h4 style="color: #FFFFFF; width: 246px;">Ingrese Nombre de Empleado:</h4></td>
                 <td class="auto-style6">
-                    <asp:TextBox ID="txtnombre" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control" Height="25px" Width="200px"></asp:TextBox>
                 </td>
-                <td class="auto-style3">Ingrese Contraseña:</td>
+                <td class="auto-style13"><h4 style="color: #FFFFFF">Ingrese Contraseña:</h4></td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtcontraseña1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtcontraseña1" runat="server" CssClass="form-control" Height="25px" Width="200px" TextMode="Password"></asp:TextBox>
+                    
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Las contraseñas no son iguales" Font-Bold="True" ForeColor="#FF3300" ControlToCompare="txtcontraseña1" ControlToValidate="txtcontrasena2"></asp:CompareValidator>
                 </td>
             </tr>
             <tr>
                 
-                <td class="input-group-text">Ingrese Nombre Usuario:</td>
+                <td class="auto-style18"><h4 style="color: #FFFFFF">Ingrese Nombre Usuario:</h4></td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="txtusuario" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtusuario" runat="server" CssClass="form-control" Height="25px" Width="200px"></asp:TextBox>
                 </td>
-                <td class="auto-style2">Repita la contraseña:</td>
+                <td class="auto-style14"><h4 style="color: #FFFFFF">Repita la contraseña:</h4></td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="txtcontrasena2" runat="server"></asp:TextBox>
-                </td>
+                    <asp:TextBox ID="txtcontrasena2" runat="server" CssClass="form-control" Height="25px" Width="200px" TextMode="Password"></asp:TextBox>
+                    </td>
             </tr>
             <tr>
-                <td class="auto-style9">Ingrese su Dirección:</td>
+                <td class="auto-style10"><h4 style="color: #FFFFFF">Ingrese su Dirección:</h4></td>
                 <td class="auto-style6">
-                    <asp:TextBox ID="txtdireccion" runat="server"></asp:TextBox>
-                </td>
-                <td class="auto-style3">Ingrese su Email:</td>
+                    <asp:TextBox ID="txtdireccion" runat="server" CssClass="form-control" Height="25px" Width="200px"></asp:TextBox>
+                    </td>
+                <td class="auto-style13"><h4 style="color: #FFFFFF">Ingrese su Email:</h4></td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtemail" runat="server" CssClass="form-control" Height="25px" Width="200px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style7">Ingrese DUI:</td>
+                <td class="auto-style11"><h4 style="color: #FFFFFF">Ingrese DUI:</h4></td>
                 <td class="auto-style4">
-                    <asp:TextBox ID="txtdui" runat="server"></asp:TextBox>
-                </td>
-                <td>Ingrese su Telefono:</td>
+                    <asp:TextBox ID="txtdui" runat="server" CssClass="form-control" Height="25px" Width="200px"></asp:TextBox>
+                    </td>
+                <td class="auto-style12"><h4 style="color: #FFFFFF">Ingrese su Telefono:</h4></td>
                 <td>
-                    <asp:TextBox ID="txttelefono" runat="server"></asp:TextBox>
-                </td>
+                    <asp:TextBox ID="txttelefono" runat="server" CssClass="form-control" Height="25px" Width="200px"></asp:TextBox>
+                    </td>
             </tr>
             <tr>
-                <td class="auto-style7">
-                    <asp:Button ID="btnregistrar" runat="server" OnClick="btnregistrar_Click" Text="Registrar" CssClass="btn btn-primary mb-2" OnClientClick="return ConfirmDelete(this);" Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" />
-                </td>
+                <td class="auto-style11">
+                    <asp:Button ID="btnregistrar" runat="server" OnClick="btnregistrar_Click" Text="Registrar" CssClass="btn btn-primary mb-2"  Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" Font-Bold="True" />
+              
+                    </td>
                 <td class="auto-style4">
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" CssClass="btn btn-primary mb-2" OnClientClick="return Update(this);" Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" />
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modificar" CssClass="btn btn-primary mb-2" OnClientClick="return Update(this);" Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" Font-Bold="True" />
+                </td>
+                <td class="auto-style12">
+                    <asp:Button ID="Button3" runat="server" Text="Eliminar" CssClass="btn btn-primary mb-2" OnClick="Button3_Click" OnClientClick="return ConfirmDelete(this);" Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" Font-Bold="True" />
                 </td>
                 <td>
-                    <asp:Button ID="Button3" runat="server" Text="Eliminar" CssClass="btn btn-primary mb-2" OnClick="Button3_Click" Width="170px" Font-Names="Segoe UI" Font-Size="Large" Height="40px" />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style7">&nbsp;</td>
-                <td class="auto-style4">
-        <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="Button1_Click" Height="36px" CssClass="btn btn-success" Width="106px" />
-                </td>
-                <td>
-        <asp:TextBox ID="txtbuscar" runat="server" Height="29px" Width="250px"></asp:TextBox>
-                </td>
-                <td>
-                    <asp:ImageButton ID="ImageButton1" runat="server" DescriptionUrl="~/Images/busquedaicon.png" ImageUrl="~/Images/buscar.png" Height="30px" Width="37px" OnClick="ImageButton1_Click" />
+                    <asp:Button ID="Button4" runat="server" CssClass="btn btn-primary mb-2" Font-Bold="True" Font-Names="Segoe UI" Font-Size="Large" Height="40px" OnClick="Button4_Click" Text="Limpiar" Width="170px" />
                 </td>
             </tr>
-        </table>
+            </table>
+                
+            <table class="auto-style17">
+                <tr>
+                    <td class="auto-style16">
+        <asp:TextBox ID="txtbuscar" runat="server" Height="28px" Width="250px" CssClass="form-control"></asp:TextBox>
+                    </td>
+                    <td>
+                    <asp:ImageButton ID="ImageButton1" runat="server" DescriptionUrl="~/Images/busquedaicon.png" ImageUrl="~/Images/buscar.png" Height="28px" Width="28px" OnClick="ImageButton1_Click" BackColor="Black" ImageAlign="Right" />
+                    </td>
+                </tr>
+            </table>
                 
         <br />
         <br />
-        <asp:GridView ID="Gv" runat="server" OnSelectedIndexChanged="Gv_SelectedIndexChanged" AutoGenerateColumns="False" Cssclass="table table-striped">
+        <asp:GridView ID="Gv" runat="server" OnSelectedIndexChanged="Gv_SelectedIndexChanged" AutoGenerateColumns="False" Cssclass="table table-striped" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="id_user" HeaderText="ID" />
                 <asp:BoundField DataField="usuario" HeaderText="USUARIO" />
                 <asp:BoundField DataField="nombres" HeaderText="NOMBRE" />
-                <asp:BoundField DataField="contraseña" HeaderText="CONTRASENA" />
                 <asp:BoundField DataField="direccion" HeaderText="DIRECCION" />
                 <asp:BoundField DataField="dui" HeaderText="DUI" />
                 <asp:BoundField DataField="email" HeaderText="E-MAIL" />
                 <asp:BoundField DataField="telefono" HeaderText="TELEFONO" />
-                <asp:CommandField ButtonType="Button" HeaderText="Seleccion" ShowHeader="True" ShowSelectButton="True" />
+                <asp:BoundField DataField="tipo" HeaderText="TIPO" />
+                <asp:CommandField ButtonType="Button" HeaderText="Seleccion" ShowHeader="True" ShowSelectButton="True" >
+                <ControlStyle CssClass="btn btn-primary mb-2" />
+                </asp:CommandField>
             </Columns>
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
         <br />
         <br />
