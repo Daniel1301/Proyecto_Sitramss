@@ -139,9 +139,31 @@ public partial class FromRpasajeros : System.Web.UI.Page
 
 
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj3()", true);
         }
+    }
+
+    protected void imgbuscado_Click(object sender, ImageClickEventArgs e)
+    {
+        
+            string busqueda = txtBuscarPas.Text;
+            Conexion.Open();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("Select * from usuarios where usuario=@usuario", Conexion);
+            cmd.Parameters.Add("usuario", SqlDbType.VarChar, 50).Value = txtBuscarPas.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            GvPasajero.DataSource = dt;
+            GvPasajero.DataBind();
+            Conexion.Close();
+       
+
+    }
+
+    protected void txtBuscarPas_TextChanged(object sender, EventArgs e)
+    {
+
     }
 }

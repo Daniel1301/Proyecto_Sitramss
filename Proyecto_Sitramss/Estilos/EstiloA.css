@@ -6,8 +6,10 @@ h4 {
     font-family: Segoe UI;
 }
 body {
+   
     background-image: url('../Images/fondito.png');
     background-size: cover;
+}
 }
 .abs-center {
   display: flex;
@@ -18,4 +20,8 @@ body {
 
 .form {
   width: 450px;
+}
+
+h4 {
+    font-family: 'Segoe UI';
 }
