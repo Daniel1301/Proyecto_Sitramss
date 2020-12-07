@@ -13,7 +13,7 @@ public partial class Ventas : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        Conexion = new SqlConnection(@"Data Source=USER-PC\MSSQLSERVER12;database =SITRAMSS; integrated security= true");
+        Conexion = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;database =SITRAMSS; integrated security= true");
     }
 
     protected void Button1_Click(object sender, EventArgs e)

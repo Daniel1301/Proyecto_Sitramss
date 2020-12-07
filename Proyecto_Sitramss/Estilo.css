@@ -1,11 +1,8 @@
 ﻿body {
-    margin: 0;
-    padding: 0;
-    background-image: url('Images/fondo.jpg');
+   
+    background-image: url('../Images/fondito.png');
     background-size: cover;
-    font-family: 'Bell MT';
 }
-
 h2{
     font-family: Centaur;
     padding: 0;
@@ -29,4 +26,3 @@ h4{
     text-align: center;
     color:  black;
 }
-
