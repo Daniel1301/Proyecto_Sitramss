@@ -24,22 +24,23 @@ public partial class MantenimientoHorarios : System.Web.UI.Page
     {
         try
         {
-
+            cn.Open();
             SqlCommand cmd = new SqlCommand("insert into horarios (horario_salida, horario_llegada, lugar_salida, lugar_destino) values(@hs, @hl, @ls, @ld) ", cn);
             cmd.Parameters.Add("@hs", SqlDbType.VarChar).Value = this.TxtHsalida.Text;
             cmd.Parameters.Add("@hl", SqlDbType.VarChar).Value = this.TxtHllegada.Text;
             cmd.Parameters.Add("@ls", SqlDbType.VarChar).Value = this.TxtLsalida.Text;
             cmd.Parameters.Add("@ld", SqlDbType.VarChar).Value = this.TxtLdestino.Text;
             if (cn.State == ConnectionState.Closed == true)
-                cn.Open();
+
+                ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "alert()", true);
             cmd.ExecuteNonQuery();
             this.LblMensaje.Text = "Insertado con Exito";
-
+           
         }
         catch (Exception)
         {
-            this.LblMensaje.Text = "error al insertar";
-            this.GridView1.Visible = false;
+            ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "error()", true);
+            this.GridView1.Visible = true;
         }
         cn.Close();
     }
@@ -139,7 +140,7 @@ public partial class MantenimientoHorarios : System.Web.UI.Page
 
     protected void BtnInsertar_Click(object sender, EventArgs e)
     {
-        ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "alert()", true);
+       
         insertar();
         llenarGrid();
         LimpiarCampos();

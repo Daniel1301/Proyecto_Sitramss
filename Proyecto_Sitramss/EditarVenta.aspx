@@ -53,7 +53,7 @@
                           </div>
                           <div class="form-group row">
                             <div class="col-sm-10">
-                                <asp:Button ID="Button1" runat="server" Text="Registrar Venta" CssClass="btn btn-primary mt-3" OnClick="Button1_Click"/>
+                                <asp:Button ID="Button1" runat="server" Text="Modificar Venta" CssClass="btn btn-primary mt-3" OnClick="Button1_Click"/>
                             </div>
                         </div>
               </div>

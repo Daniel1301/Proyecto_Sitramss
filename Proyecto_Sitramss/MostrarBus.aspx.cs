@@ -35,4 +35,9 @@ public partial class MostrarBus : System.Web.UI.Page
         }
         cn.Close();
     }
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

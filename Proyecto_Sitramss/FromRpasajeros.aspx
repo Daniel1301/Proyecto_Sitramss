@@ -26,6 +26,12 @@
         function msj3() {
             swal("ERROR", "FATAL ERROR USTED DEBE SELECCIONAR ALGO", "error");
         }
+        function select() {
+            swal("ERROR", "Busque el nombre de usuario correctamente", "error");
+        }
+        function insert() {
+            swal("ERROR", "Existe uno o mas campos vacios porfavor verifique los datos de entrada y vuelva a intentarlo", "error");
+        }
         function msj4() {
             swal("ERROR", "EL USUARIO BUSCADO NO ENCONTRADO", "error");
         }
@@ -201,7 +207,8 @@ function () {
                         </td>
                         <td class="auto-style9">&nbsp;</td>
                         <td class="auto-style21">&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td>
+                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td class="auto-style7" > <h4 style="color: #FFFFFF">Dui: </h4> </td>
@@ -213,7 +220,9 @@ function () {
                         </td>
                         <td class="auto-style9"></td>
                         <td class="auto-style21">&nbsp;</td>
-                        <td class="auto-style14"></td>
+                        <td class="auto-style14">
+                    <asp:Button ID="btnlimpiar" runat="server" CssClass="btn btn-primary mb-2" Font-Bold="True" Font-Names="Segoe UI" Font-Size="Large" Height="34px" OnClick="Button4_Click" Text="Limpiar" Width="170px" />
+                        </td>
                     </tr>
                     <tr>
                         <td class="auto-style2" colspan="2">

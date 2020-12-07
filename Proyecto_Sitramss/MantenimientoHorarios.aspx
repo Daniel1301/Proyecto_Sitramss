@@ -29,6 +29,13 @@
                 'success'
             )
         }
+        function error() {
+            Swal.fire(
+                'ERROR!',
+                'Algo salio mal revisa tus campos!',
+                'Error'
+            )
+        }
 
         function alert3()
         {

@@ -9,46 +9,75 @@ using System.Web.UI.WebControls;
 
 public partial class Form_Radmin : System.Web.UI.Page
 {
+    bool s = false;
     SqlConnection Conexion;
     protected void Page_Load(object sender, EventArgs e)
     {
+        string a;
+        
         string USUARIO = Convert.ToString(Session["USUARIO"]);
-        string USUARIO1 = Convert.ToString(Session["TIPO"]);
-        txtsesion.Text = USUARIO1.ToString();
-        Conexion = new SqlConnection(@"Data Source=BRYANELAZ\XPS;Initial Catalog=SITRAMSS;Integrated Security=True");
+        string TIPO = Convert.ToString(Session["TIPO"]);
+        if (TIPO == "admi")
+        {
+            a = "Administrador";
+        }
+        else
+        {
+            a = "Empleado";
+        }
+        if (a == "Administrador")
+        {
+            
+        }
+        else
+        {
+            
+            s = true;
+            Response.Redirect("Administrador.aspx");
+            Session["P"] = "1";
+        }
+       
+        //txtsesion.Text = USUARIO1.ToString();
+        Conexion = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;Initial Catalog=SITRAMSS;Integrated Security=True");
         MostrarDatos();
+        
+
     }
+  
     public void Insertar()
     {
+        
 
-        //abriendo conexion
-        Conexion.Open();
-        //consulta
-        SqlCommand cmd = new SqlCommand("Insert into usuarios (usuario, contraseña, nombres,direccion,dui,telefono,email,tipo) Values ( @usuario,@contraseña, @nombres, @direccion,@dui,@telefono,@email,@tipo)", Conexion);
-        //asignando datos de los textbox a los parametros de la consulta
-        cmd.Parameters.Add("tipo", SqlDbType.VarChar, 50).Value = "admi";
-        cmd.Parameters.Add("usuario", SqlDbType.VarChar, 50).Value = txtusuario.Text;
-        cmd.Parameters.Add("contraseña", SqlDbType.VarChar, 50).Value = txtcontraseña1.Text;
-        cmd.Parameters.Add("nombres", SqlDbType.VarChar, 50).Value = txtnombre.Text;
-        cmd.Parameters.Add("direccion", SqlDbType.VarChar, 50).Value = txtdireccion.Text;
-        cmd.Parameters.Add("email", SqlDbType.VarChar, 50).Value = txtemail.Text;
-        cmd.Parameters.Add("dui", SqlDbType.Float, 15).Value = txtdui.Text;
-        cmd.Parameters.Add("telefono", SqlDbType.Float, 15).Value = txttelefono.Text;
-        //insertando los datos
-        cmd.ExecuteNonQuery();
-        //cerrando la peticion
-        Conexion.Close();
-        txtusuario.Text = "";
-        txtcontraseña1.Text = "";
-        txtcontrasena2.Text = "";
-        txtnombre.Text = "";
-        txtdireccion.Text = "";
-        txtemail.Text = "";
+            //abriendo conexion
+            Conexion.Open();
+            //consulta
+            SqlCommand cmd = new SqlCommand("Insert into usuarios (usuario, contraseña, nombres,direccion,dui,telefono,email,tipo) Values ( @usuario,@contraseña, @nombres, @direccion,@dui,@telefono,@email,@tipo)", Conexion);
+            //asignando datos de los textbox a los parametros de la consulta
+            cmd.Parameters.Add("tipo", SqlDbType.VarChar, 50).Value = "admi";
+            cmd.Parameters.Add("usuario", SqlDbType.VarChar, 50).Value = txtusuario.Text;
+            cmd.Parameters.Add("contraseña", SqlDbType.VarChar, 50).Value = txtcontraseña1.Text;
+            cmd.Parameters.Add("nombres", SqlDbType.VarChar, 50).Value = txtnombre.Text;
+            cmd.Parameters.Add("direccion", SqlDbType.VarChar, 50).Value = txtdireccion.Text;
+            cmd.Parameters.Add("email", SqlDbType.VarChar, 50).Value = txtemail.Text;
+            cmd.Parameters.Add("dui", SqlDbType.Float, 15).Value = txtdui.Text;
+            cmd.Parameters.Add("telefono", SqlDbType.Float, 15).Value = txttelefono.Text;
+            //insertando los datos
+            cmd.ExecuteNonQuery();
+            //cerrando la peticion
+            Conexion.Close();
+            txtusuario.Text = "";
+            txtcontraseña1.Text = "";
+            txtcontrasena2.Text = "";
+            txtnombre.Text = "";
+            txtdireccion.Text = "";
+            txtemail.Text = "";
 
-        txttelefono.Text = "";
-        txtdui.Text = "";
-        ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "alert()", true);
-        MostrarDatos();
+            txttelefono.Text = "";
+            txtdui.Text = "";
+            ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "alert()", true);
+            MostrarDatos();
+        
+        
     }
 
 
@@ -61,7 +90,7 @@ public partial class Form_Radmin : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj3()", true);
+            ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "nel()", true);
         }
     }
 
@@ -196,5 +225,10 @@ public partial class Form_Radmin : System.Web.UI.Page
     protected void txtsesion_TextChanged(object sender, EventArgs e)
     {
 
+    }
+
+    protected void btnRegresar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Administrador.aspx");
     }
 }

@@ -13,6 +13,29 @@ public partial class MantenimientoBus : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        string a;
+        bool s = false;
+        string USUARIO = Convert.ToString(Session["USUARIO"]);
+        string TIPO = Convert.ToString(Session["TIPO"]);
+        if (TIPO == "admi")
+        {
+            a = "Administrador";
+        }
+        else
+        {
+            a = "Empleado";
+        }
+        if (a == "Administrador")
+        {
+
+        }
+        else
+        {
+
+            s = true;
+            Response.Redirect("Administrador.aspx");
+            Session["P"] = "1";
+        }
         cn = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;Initial Catalog=SITRAMSS;Integrated Security=True");
         if (!IsPostBack)
         {
@@ -32,13 +55,14 @@ public partial class MantenimientoBus : System.Web.UI.Page
             if (cn.State == ConnectionState.Closed == true)
             cn.Open();
             cmd.ExecuteNonQuery();
-            this.LblMensaje.Text = "Insertado con Exito";
+          
+            ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "alert()", true);
 
         }
         catch (Exception)
         {
-            this.LblMensaje.Text = "error al insertar";
-            this.GridView1.Visible = false;
+            ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "error()", true);
+            this.GridView1.Visible = true;
         }
         cn.Close();
     }
@@ -126,7 +150,7 @@ public partial class MantenimientoBus : System.Web.UI.Page
         }
         catch (Exception)
         {
-            this.LblMensaje.Text = "Error ";
+            ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "error()", true);
         }
         cn.Close();
     }
@@ -135,10 +159,15 @@ public partial class MantenimientoBus : System.Web.UI.Page
 
     protected void BtnInsertar_Click(object sender, EventArgs e)
     {
-        ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "alert()", true);
+        try { 
         insertar();
         llenarGrid();
         LimpiarCampos();
+        
+        } catch(Exception ex)
+        {
+           
+        }
     }
 
     protected void BtnModificar_Click(object sender, EventArgs e)

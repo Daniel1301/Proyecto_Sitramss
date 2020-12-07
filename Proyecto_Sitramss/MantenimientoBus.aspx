@@ -23,7 +23,13 @@
                 'success'
             )
         }
-
+        function error() {
+            Swal.fire(
+                'ERROR!',
+                'Algo salio mal revisa tus campos!',
+                'Error'
+            )
+        }
         function alert2() {
             Swal.fire(
                 'Bien Hecho!',

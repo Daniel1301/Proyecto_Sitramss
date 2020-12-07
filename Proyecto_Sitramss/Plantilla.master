@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="Estilo.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="w5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
@@ -36,7 +37,7 @@
             </div>
         </header-->
 
-
+         <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <a class="navbar-brand" href="#">APP-SITRAMSS</a>
@@ -61,10 +62,20 @@
                     <li class="nav-item">
                     <a class="nav-link" href="FromRpasajeros.aspx">Registro Pasajeros</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="Ventas.aspx">Ventas</a>
+                     <li class="nav-item">
+                    <a class="nav-link" href="Form_Radmin.aspx">Registro Sub-Administrador</a>
                   </li>
-                </ul>
+               
+                    <li class="nav-item">
+                        <a class="nav-link" href="Ventas.aspx">Registrar Ventas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.aspx">Salir</a>
+                    </li>
+                        </ul>
+                  
+                
               </div>
             </nav>
         <div>

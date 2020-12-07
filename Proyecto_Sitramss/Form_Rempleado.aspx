@@ -120,11 +120,30 @@ function () {
             width: 374px;
             height: 23px;
         }
-        .auto-style19 {
-            margin-top: 0;
-        }
         .auto-style20 {
             width: 1150px
+        }
+        .auto-style22 {
+            width: 43px;
+        }
+        .auto-style24 {
+            display: block;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+        .auto-style25 {
+            width: 84px;
         }
         </style>
 </head>
@@ -266,15 +285,23 @@ function () {
             <table class="auto-style17">
                 <tr>
                     <td class="auto-style16">
-        <asp:TextBox ID="txtbuscar" runat="server" Height="28px" Width="250px" CssClass="form-control"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
                     <td>
-                    <asp:ImageButton ID="ImageButton1" runat="server" DescriptionUrl="~/Images/busquedaicon.png" ImageUrl="~/Images/buscar.png" Height="28px" Width="28px" OnClick="ImageButton1_Click" BackColor="Black" ImageAlign="Right" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
             </table>
                 
         <br />
+            <table class="auto-style17">
+                <tr>
+                    <td class="auto-style25">
+        <asp:TextBox ID="txtbuscar" runat="server" Height="28px" Width="391px" CssClass="auto-style24"></asp:TextBox>
+                    </td>
+                    <td class="auto-style22">
+                    <asp:ImageButton ID="ImageButton1" runat="server" DescriptionUrl="~/Images/busquedaicon.png" ImageUrl="~/Images/buscar.png" Height="29px" Width="41px" OnClick="ImageButton1_Click" BackColor="Black" ImageAlign="Right" />
+                    </td>
+                </tr>
+            </table>
         <br />
         <asp:GridView ID="Gv" runat="server" OnSelectedIndexChanged="Gv_SelectedIndexChanged" AutoGenerateColumns="False" Cssclass="table table-striped" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
@@ -302,7 +329,7 @@ function () {
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-                    <asp:Button ID="btnRegresar" runat="server" CssClass="btn btn-primary mb-2" Height="34px" Text="Regresar" Width="129px" ForeColor="Black" OnClick="btnRegresar_Click"  />
+                    <asp:Button ID="btnRegresar" runat="server" CssClass="btn btn-primary mb-2" Height="34px" Text="Regresar" Width="129px" ForeColor="Black" OnClick="btnRegresar_Click "  />
         <br />
         <br />
             </div>
