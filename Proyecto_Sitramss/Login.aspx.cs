@@ -42,6 +42,9 @@ public partial class Login : System.Web.UI.Page
                 Session["USUARIO"] = txtuser.Text.Trim();
                 llave = true;
 
+            }else
+            {
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj5()", true);
             }
             //cerrando la base de datos
               sqlcon.Close();

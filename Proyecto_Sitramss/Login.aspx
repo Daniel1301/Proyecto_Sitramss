@@ -18,6 +18,7 @@
         function msj() {
             swal("Completado", "Usted a sido logeado correctamente como administrador :)", "info");
         }
+
         function msj2() {
             swal("Completado", "Usted a sido logeado correctamente como empleado :)", "info");
         }
@@ -27,7 +28,9 @@
         function msj4() {
             swal("ERROR", "HAS DEJADO ALGUN CAMPO EN BLANCO PORFAVOR INGRESA UN VALOR Y VUELVE A INTENTARLO!", "error");
         }
-
+        function msj5() {
+            swal("ERROR", "NOMBRE O CONTRASEÑA INCORRECTA VUELVE A INTENTARLO!", "error");
+        }
         var object = { status: false, ele: null };
         function ConfirmDelete(ev) {
             if (object.status) { return true; };

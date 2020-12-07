@@ -201,8 +201,9 @@ public partial class Form_Radmin : System.Web.UI.Page
         string busqueda = txtbuscar.Text;
         Conexion.Open();
         DataTable dt = new DataTable();
-        SqlCommand cmd = new SqlCommand("Select * from usuarios where usuario=@usuario", Conexion);
+        SqlCommand cmd = new SqlCommand("Select * from usuarios where usuario=@usuario and tipo=@tipo", Conexion);
         cmd.Parameters.Add("usuario", SqlDbType.VarChar, 50).Value = txtbuscar.Text;
+        cmd.Parameters.Add("tipo", SqlDbType.VarChar, 50).Value = "admi";
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         da.Fill(dt);
         Gv.DataSource = dt;
