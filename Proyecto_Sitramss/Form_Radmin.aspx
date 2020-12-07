@@ -187,7 +187,9 @@ function () {
                 <td class="auto-style12">
                     
                     &nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="txtsesion" runat="server" OnTextChanged="txtsesion_TextChanged"></asp:TextBox>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style10"><h4 style="color: #FFFFFF; width: 246px;">Ingrese Nombre de Admin:</h4></td>

@@ -12,6 +12,9 @@ public partial class Form_Radmin : System.Web.UI.Page
     SqlConnection Conexion;
     protected void Page_Load(object sender, EventArgs e)
     {
+        string USUARIO = Convert.ToString(Session["USUARIO"]);
+        string USUARIO1 = Convert.ToString(Session["TIPO"]);
+        txtsesion.Text = USUARIO1.ToString();
         Conexion = new SqlConnection(@"Data Source=BRYANELAZ\XPS;Initial Catalog=SITRAMSS;Integrated Security=True");
         MostrarDatos();
     }
@@ -188,5 +191,10 @@ public partial class Form_Radmin : System.Web.UI.Page
         txtdui.Text = Gv.SelectedRow.Cells[4].Text.ToString();
         txtemail.Text = Gv.SelectedRow.Cells[5].Text.ToString();
         txttelefono.Text = Gv.SelectedRow.Cells[6].Text.ToString();
+    }
+
+    protected void txtsesion_TextChanged(object sender, EventArgs e)
+    {
+
     }
 }

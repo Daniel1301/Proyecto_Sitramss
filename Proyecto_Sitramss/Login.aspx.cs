@@ -78,14 +78,14 @@ public partial class Login : System.Web.UI.Page
                     Session["TIPO"] = "admi";
                     //enviando al siguiente formulario
                     ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj()", true);
-                    Response.Redirect("Administrador.aspx");
+                    Response.Redirect("Form_Radmin.aspx");
                    
                 }
                 else
                 {
                     Session["TIPO"] = "Empleado";
                     ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj2()", true);
-                    Response.Redirect("Administrador.aspx");
+                    Response.Redirect("Form_Radmin.aspx");
                     
                 }
             }
