@@ -24,7 +24,7 @@ public partial class Login : System.Web.UI.Page
     public void Verificacion_de_login()
     {
         //Cadena de conexion
-        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;Initial Catalog=SITRAMSS;Integrated Security=True"))
+        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=BRYANELAZ\XPS;Initial Catalog=SITRAMSS;Integrated Security=True"))
         {
             //abriendo la base de datos
             sqlcon.Open();
@@ -54,7 +54,7 @@ public partial class Login : System.Web.UI.Page
     public void Verificacion_dos_pasos()
     {
         //cadena de conexion
-        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;Initial Catalog=SITRAMSS;Integrated Security=True"))
+        using (SqlConnection sqlcon = new SqlConnection(@"Data Source=BRYANELAZ\XPS;Initial Catalog=SITRAMSS;Integrated Security=True"))
         {
             //abriendo la base de datos
             sqlcon.Open();
@@ -77,13 +77,16 @@ public partial class Login : System.Web.UI.Page
                     //verificando
                     Session["TIPO"] = "admi";
                     //enviando al siguiente formulario
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj()", true);
                     Response.Redirect("Administrador.aspx");
-
+                   
                 }
                 else
                 {
+                    Session["TIPO"] = "Empleado";
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "ramdomtext", "msj2()", true);
+                    Response.Redirect("Administrador.aspx");
                     
-                    Response.Redirect("Registrar_usuario.aspx");
                 }
             }
             //cerrando la base de datos
@@ -105,6 +108,6 @@ public partial class Login : System.Web.UI.Page
     /// <param name="e"></param>
     protected void Unnamed6_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Registrar_usuario.aspx");
+     
     }
 }
