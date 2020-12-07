@@ -9,6 +9,7 @@ public partial class Administrador : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        string USUARIO = Convert.ToString(Session["USUARIO"]);
 
     }
 }

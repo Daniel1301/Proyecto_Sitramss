@@ -35,7 +35,8 @@ public partial class Form_Rempleado : System.Web.UI.Page
     {
         Conexion.Open();
         DataTable dt = new DataTable();
-        SqlCommand cmd = new SqlCommand("Select * from usuarios", Conexion);
+        SqlCommand cmd = new SqlCommand("Select * from usuarios where tipo=@tipo", Conexion);
+        cmd.Parameters.Add("tipo", SqlDbType.VarChar, 50).Value = "Empleado";
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         da.Fill(dt);
         Gv.DataSource = dt;
