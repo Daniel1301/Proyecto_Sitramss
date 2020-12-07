@@ -168,9 +168,7 @@
                 <div class="form-group row">
                 </div>
                 <div class="form-group row">
-                    <div class="col-lg-7 mt-3">
-
-                    </div>
+                    <asp:Button ID="btnRegresar" runat="server" CssClass="btn btn-primary mb-2" Height="34px" Text="Regresar" Width="129px" ForeColor="Black" OnClick="btnRegresar_Click" style="margin-left: 69"  />
                 </div>
                 <br />
                 <div class="form-group row">

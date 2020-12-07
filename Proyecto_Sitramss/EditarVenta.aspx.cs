@@ -14,7 +14,7 @@ public partial class EditarVenta : System.Web.UI.Page
     public string id;
     protected void Page_Load(object sender, EventArgs e)
     {
-        Conexion = new SqlConnection(@"Data Source=USER-PC\MSSQLSERVER12;database =SITRAMSS; integrated security= true");
+        Conexion = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;database =SITRAMSS; integrated security= true");
 
         id = Request.QueryString["ID"];
 

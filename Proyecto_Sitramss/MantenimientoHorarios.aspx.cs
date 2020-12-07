@@ -181,4 +181,9 @@ public partial class MantenimientoHorarios : System.Web.UI.Page
     {
 
     }
+
+    protected void btnRegresar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Administrador.aspx");
+    }
 }

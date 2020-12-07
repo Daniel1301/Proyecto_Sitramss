@@ -140,6 +140,9 @@
                         </asp:GridView> </center>
                         <br />
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+                        <br />
+                        <br />
+                    <asp:Button ID="btnRegresar" runat="server" CssClass="btn btn-primary mb-2" Height="34px" Text="Regresar" Width="129px" ForeColor="Black" OnClick="btnRegresar_Click" style="margin-left: 69"  />
         </div>
         </div>
     </div>

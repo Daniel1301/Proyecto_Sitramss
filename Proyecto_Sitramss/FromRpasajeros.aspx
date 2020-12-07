@@ -85,7 +85,7 @@ function () {
             width: 210px;
         }
          .auto-style6 {
-             height: 26px;
+             height: 47px;
              width: 147px;
          }
          .auto-style7 {
@@ -124,6 +124,21 @@ function () {
              height: 23px;
              width: 14px;
          }
+         .auto-style23 {
+             width: 260px;
+             height: 47px;
+         }
+         .auto-style24 {
+             height: 47px;
+         }
+         .auto-style25 {
+             height: 47px;
+             width: 138px;
+         }
+         .auto-style26 {
+             height: 47px;
+             width: 14px;
+         }
         </style>
   
 </head>
@@ -134,15 +149,15 @@ function () {
           
                 <table class="table table-striped">
                     <tr>
-                        <td class="auto-style6">&nbsp;</td>
-                        <td class="auto-style8">
+                        <td class="auto-style6"></td>
+                        <td class="auto-style25">
                             <asp:TextBox ID="txtId" runat="server" Visible="False" Width="141px"></asp:TextBox>
                         </td>
-                        <td class="auto-style21">
-                            &nbsp;</td>
-                        <td class="auto-style9">&nbsp;</td>
-                        <td class="auto-style21">&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td class="auto-style26">
+                            </td>
+                        <td class="auto-style23"></td>
+                        <td class="auto-style26">&nbsp;</td>
+                        <td class="auto-style24">&nbsp; </td>
                     </tr>
                     <tr>
                         <td class="auto-style7" ><h4 style="color: #FFFFFF">Nombre Completo: </h4></td>
@@ -266,6 +281,16 @@ function () {
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
+                <table class="w-100">
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                    <asp:Button ID="btnRegresar" runat="server" CssClass="btn btn-primary mb-2" Height="34px" Text="Regresar" Width="129px" ForeColor="Black" OnClick="btnRegresar_Click" style="margin-left: 69"  />
+                        </td>
+                    </tr>
+                </table>
             </div>
 
         

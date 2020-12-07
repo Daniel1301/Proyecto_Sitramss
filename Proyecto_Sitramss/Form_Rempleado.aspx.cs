@@ -14,7 +14,7 @@ public partial class Form_Rempleado : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //cadena de conexion
-        Conexion = new SqlConnection(@"Data Source=BRYANELAZ\XPS;Initial Catalog=SITRAMSS;Integrated Security=True");
+        Conexion = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;Initial Catalog=SITRAMSS;Integrated Security=True");
         MostrarDatos();
     }
     /// <summary>
@@ -241,5 +241,10 @@ public partial class Form_Rempleado : System.Web.UI.Page
 
         txttelefono.Text = "";
         txtdui.Text = "";
+    }
+
+    protected void btnRegresar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Administrador.aspx");
     }
 }

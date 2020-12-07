@@ -94,6 +94,10 @@
                           <div class="form-group row">
                             <div class="col-sm-10">
                                 <asp:Button ID="Button1" runat="server" Text="Registrar Venta" CssClass="btn btn-primary mt-3" OnClick="Button1_Click" />
+                                <br />
+                                <br />
+                                <br />
+                    <asp:Button ID="btnRegresar" runat="server" CssClass="btn btn-primary mb-2" Height="34px" Text="Regresar" Width="129px" ForeColor="Black" OnClick="btnRegresar_Click" style="margin-left: 69"  />
                             </div>
                         </div>
               </div>

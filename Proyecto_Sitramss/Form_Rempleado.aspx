@@ -120,6 +120,12 @@ function () {
             width: 374px;
             height: 23px;
         }
+        .auto-style19 {
+            margin-top: 0;
+        }
+        .auto-style20 {
+            width: 1150px
+        }
         </style>
 </head>
 <body>
@@ -171,6 +177,14 @@ function () {
                 <asp:Parameter Name="original_tipo" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
+    
+        <table class="nav-justified">
+            <tr>
+                <td class="auto-style20">&nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
     
         <br />
     
@@ -288,6 +302,7 @@ function () {
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
+                    <asp:Button ID="btnRegresar" runat="server" CssClass="btn btn-primary mb-2" Height="34px" Text="Regresar" Width="129px" ForeColor="Black" OnClick="btnRegresar_Click"  />
         <br />
         <br />
             </div>

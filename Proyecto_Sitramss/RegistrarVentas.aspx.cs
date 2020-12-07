@@ -12,7 +12,7 @@ public partial class RegistrarVentas : System.Web.UI.Page
     SqlConnection Conexion;
     protected void Page_Load(object sender, EventArgs e)
     {
-        Conexion = new SqlConnection(@"Data Source=USER-PC\MSSQLSERVER12;database =SITRAMSS; integrated security= true");
+        Conexion = new SqlConnection(@"Data Source=DESKTOP-HU8EM4D;database =SITRAMSS; integrated security= true");
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -39,12 +39,19 @@ public partial class RegistrarVentas : System.Web.UI.Page
             cmd.ExecuteNonQuery();
             ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "Success()", true);
             Conexion.Close();
+          
         }
         catch(Exception x) {
 
             ClientScript.RegisterStartupScript(this.GetType(), "ramdomtext", "DatosErroneos()", true);
             //Label1.Text = "<script> Swal.fire({position: 'top-end', icon: 'success',title: 'Has logrado guardar tus avances.', showConfirmButton: false,timer: 1500}) </script>";
+            Response.Redirect("Ventas.aspx");
         }
 
+    }
+
+    protected void btnRegresar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Ventas.aspx");
     }
 }

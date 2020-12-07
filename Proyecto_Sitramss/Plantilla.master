@@ -48,17 +48,19 @@
                 <ul class="navbar-nav mr-auto">
 
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="MantenimientoBus.aspx">Buses</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Buses</a>
+                    <a class="nav-link" href="MantenimientoHorarios.aspx">Horarios</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Empleados</a>
+                    <a class="nav-link" href="Form_Rempleado.aspx">Registro Empleados</a>
                   </li>
-
+                    <li class="nav-item">
+                    <a class="nav-link" href="FromRpasajeros.aspx">Registro Pasajeros</a>
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="Ventas.aspx">Ventas</a>
                   </li>

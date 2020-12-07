@@ -10,31 +10,20 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="n_venta" DataSourceID="SqlDataSource1"  CssClass="table table-bordered table-hover w-50 mx-auto">
         <Columns>
             <asp:BoundField DataField="n_venta" HeaderText="n_venta" InsertVisible="False" ReadOnly="True" SortExpression="n_venta"  />
-            <asp:BoundField DataField="nombres" HeaderText="Nombres" SortExpression="nombres" />
-            <asp:BoundField DataField="apellidos" HeaderText="Apellidos" SortExpression="apellidos" />
-            <asp:BoundField DataField="servicio" HeaderText="Servicio" SortExpression="servicio" />
-            <asp:BoundField DataField="destino" HeaderText="Destino" SortExpression="destino" />
-            <asp:BoundField DataField="fecha" HeaderText="F. venta" SortExpression="fecha" />
-            <asp:BoundField DataField="fecha_viaje" HeaderText="F. viaje" SortExpression="fecha_viaje" />
-            <asp:BoundField DataField="cantidad" HeaderText="Cantidad" SortExpression="cantidad" />
-            <asp:BoundField DataField="precio" HeaderText="Precio" SortExpression="precio" />
-            <asp:BoundField DataField="total" HeaderText="Total" SortExpression="total" />
+            <asp:BoundField DataField="fecha_viaje" HeaderText="fecha_viaje" SortExpression="fecha_viaje" />
+            <asp:BoundField DataField="nombres" HeaderText="nombres" SortExpression="nombres" />
+            <asp:BoundField DataField="apellidos" HeaderText="apellidos" SortExpression="apellidos" />
+            <asp:BoundField DataField="servicio" HeaderText="servicio" SortExpression="servicio" />
+            <asp:BoundField DataField="destino" HeaderText="destino" SortExpression="destino" />
+            <asp:BoundField DataField="cantidad" HeaderText="cantidad" SortExpression="cantidad" />
+            <asp:BoundField DataField="total" HeaderText="total" SortExpression="total" />
+            <asp:BoundField DataField="precio" HeaderText="precio" SortExpression="precio" />
             
-        <asp:TemplateField>
-            <ItemTemplate>
-            <asp:HyperLink runat="server" NavigateUrl='<%#"~/EditarVenta.aspx?ID="+Eval("n_venta") %>' ><i class="fas fa-edit"></i></asp:HyperLink>
-            </ItemTemplate>
-        </asp:TemplateField>
-            <asp:TemplateField>
-                <ItemTemplate>
-                <asp:LinkButton ID="btnEliminarVenta" CommandArgument='<%#Eval("n_venta")%>' runat="server" Text="Eliminar"  OnClick="btnEliminarVenta_Click"><i class="fas fa-trash"></i></asp:LinkButton>
-            </ItemTemplate>
-        </asp:TemplateField>
         </Columns>
 
     </asp:GridView>
 
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SITRAMSSConnectionString4 %>" SelectCommand="SELECT [n_venta], [fecha_viaje], [nombres], [apellidos], [servicio], [destino], [cantidad], [fecha], [total], [precio] FROM [ventas]"></asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SITRAMSSConnectionString5 %>" SelectCommand="SELECT [n_venta], [fecha_viaje], [nombres], [apellidos], [servicio], [destino], [cantidad], [fecha], [total], [precio] FROM [ventas]"></asp:SqlDataSource>
 
 </asp:Content>
 
