@@ -58,8 +58,8 @@
     <form id="form2" runat="server">
     <div class="container mt-4">
         <h2 class="text-center text-uppercase display-4">Horarios</h2>
-      <asp:Label ID="LblResultado" runat="server" ForeColor="Red"></asp:Label>
-      <asp:Label ID="LblMensaje" runat="server"></asp:Label>
+      <asp:Label ID="LblResultado" runat="server" ForeColor="Red" Visible="False"></asp:Label>
+      <asp:Label ID="LblMensaje" runat="server" Visible="False"></asp:Label>
 
           <br />
 
