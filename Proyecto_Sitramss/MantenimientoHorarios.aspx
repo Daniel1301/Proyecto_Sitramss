@@ -83,6 +83,7 @@
                    <asp:Label ID="Label1" runat="server" CssClass="col-md-2 control-label" Font-Names="Arial Black" Font-Size="X-Large" ForeColor="White">Horario de Salida: </asp:Label>       
                     <div class="col-md-10">
                     <asp:TextBox ID="TxtHsalida" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorHsalida" runat="server" ControlToValidate="TxtHsalida" ErrorMessage="Tiene que introducir un valor!" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                    </div>
    
@@ -90,16 +91,20 @@
                    <asp:Label ID="Label2" runat="server" CssClass="col-md-2 control-label" Font-Names="Arial Black" Font-Size="X-Large" ForeColor="White">Horario de llegada: </asp:Label>
                    <div class="col">
                     <asp:TextBox ID="TxtHllegada" runat="server" CssClass="form-control" ></asp:TextBox>
+                       <asp:RequiredFieldValidator ID="RequiredFieldValidatorHLlegada" runat="server" ControlToValidate="TxtHllegada" ErrorMessage="Tiene que introducir un valor!" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
               <div class="form-group row"> 
                   <asp:Label ID="Label3" runat="server"  CssClass="col-md-2 control-label" Font-Names="Arial Black" Font-Size="X-Large" ForeColor="White">Lugar de Salida :</asp:Label>
                   <div class="col-md-10">
                       <asp:TextBox ID="TxtLsalida" runat="server" CssClass="form-control"></asp:TextBox>
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidatorLsalida" runat="server" ControlToValidate="TxtLsalida" ErrorMessage="Tiene que introducir un valor!" ForeColor="Red"></asp:RequiredFieldValidator>
                       <br />
                       <asp:Label ID="Label4" runat="server" Text="Lugar de Destino" Font-Names="Arial Black" Font-Size="X-Large" ForeColor="White"></asp:Label>
                       <br />
                       <asp:TextBox ID="TxtLdestino" runat="server"></asp:TextBox>
+                      <br />
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidatorLdestino" runat="server" ControlToValidate="TxtLdestino" ErrorMessage="Tiene que introducir un valor!" ForeColor="Red"></asp:RequiredFieldValidator>
                   </div>
               </div>
                     <br /><br />
